@@ -3,13 +3,13 @@ import React from "react";
 const Dashboard = () => {
   return (
     <div className="relative">
-      <div className="lg:absolute lg:-top-40 w-full max-w-8xl h-1/8">
+      <div className="lg:absolute lg:-top-30 w-full max-w-8xl h-1/8">
         <section className="relative flex justify-center px-4 lg:pb-40">
           <img
             src="/images/Subtract.svg"
             alt=""
             aria-hidden
-            className="hidden lg:block absolute top-15 left-1/2 -translate-x-1/2 opacity-100  w-full h-auto"
+            className="hidden lg:block absolute top-20 left-1/2 -translate-x-1/2 opacity-100  w-full h-auto"
           />
 
           {/* MAIN CONTAINER */}

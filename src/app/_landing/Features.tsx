@@ -4,7 +4,7 @@ import featuresData from "@/assets/card_data";
 
 const Features = () => {
   return (
-    <section className="relative bg-black lg:layout-padding pt-20 px-8 lg:pt-90 pb-24 -z-10">
+    <section className="relative bg-black lg:layout-padding pt-20 px-8 lg:pt-[400px] pb-24 -z-10">
       {/* CONTENT */}
 
       <div className="relative z-0 max-w-6xl mx-auto">

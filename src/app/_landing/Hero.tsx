@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative overflow-hidden">
       {/* HERO BACKGROUND */}
       <div
-        className="relative lg:min-h-[130vh] bg-black"
+        className="relative lg:min-h-[140vh] bg-black"
         style={{ paddingTop: `${NAVBAR_HEIGHT}px` }}
       >
        
