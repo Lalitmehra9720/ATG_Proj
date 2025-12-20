@@ -10,7 +10,7 @@ export default function AuthLayout({
   return (
     <div className="relative h-screen max-h-screen bg-black flex items-center justify-center">
       <div className="w-full max-w-7xl flex justify-between gap-16 pl-0 lg:pl-20">
-        <div className="w-full pt-20 lg:pt-50 lg:w-fit text-white flex flex-col px-8 lg:px-0 items-center lg:items-start justify-center">
+        <div className="w-full pb-4 lg:w-fit text-white flex flex-col px-8 lg:px-0 items-center lg:items-start justify-center">
           <Link href={"/"}>
             <Image
               src="/logo.svg"

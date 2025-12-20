@@ -13,6 +13,7 @@ export default function Login() {
   const router = useRouter();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [isLoading, setIsLoading] = useState(false);
+  const [show,setShow]=useState(false);
   const [error, setError] = useState("");
   const { login } = useAuth();
 
@@ -63,15 +64,26 @@ export default function Login() {
           onChange={handleChange}
           className="w-full rounded-lg bg-[#1A1C22] px-4 py-3 text-sm text-white outline-none"
         />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-          value={formData.password}
-          onChange={handleChange}
-          className="w-full rounded-lg bg-[#1A1C22] px-4 py-3 text-sm text-white outline-none"
-        />
+      <div className="w-full relative rounded-lg flex items-center justify-center">
+          <input
+            type={!show ? "password" : "text"}
+            name="password"
+            placeholder="Password"
+            required
+            value={formData.password}
+            onChange={handleChange}
+            className="w-full rounded-lg bg-[#1A1C22] px-4 py-3 text-sm outline-none placeholder:text-white/40"
+          />
+          <button
+            onClick={() => {
+              setShow((prev) => !prev);
+            }}
+            className="absolute right-4"
+            type="button"
+          >
+            {show ? "Hide" : "Show"}
+          </button>
+        </div>
         <Button type="submit" className="py-4 px-6 w-full" disabled={isLoading}>
           {isLoading ? "Logging in..." : "Login"}
         </Button>

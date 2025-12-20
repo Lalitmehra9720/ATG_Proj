@@ -15,6 +15,7 @@ export default function Signup() {
     password: "",
     confirmPassword: "",
   });
+  const [show, setShow] = useState(false);
   const { login } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +58,7 @@ export default function Signup() {
   };
 
   return (
-    <div>
+    <div className="pt-20 lg:pt-50 ">
       <h1 className="text-4xl font-semibold lg:mt-10 self-start mt-4">
         Register
       </h1>
@@ -91,16 +92,26 @@ export default function Signup() {
           onChange={handleChange}
           className="w-full rounded-lg bg-[#1A1C22] px-4 py-3 text-sm outline-none placeholder:text-white/40"
         />
-
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-          value={signupData.password}
-          onChange={handleChange}
-          className="w-full rounded-lg bg-[#1A1C22] px-4 py-3 text-sm outline-none placeholder:text-white/40"
-        />
+        <div className="w-full relative rounded-lg flex items-center justify-center">
+          <input
+            type={!show ? "password" : "text"}
+            name="password"
+            placeholder="Password"
+            required
+            value={signupData.password}
+            onChange={handleChange}
+            className="w-full rounded-lg bg-[#1A1C22] px-4 py-3 text-sm outline-none placeholder:text-white/40"
+          />
+          <button
+            onClick={() => {
+              setShow((prev) => !prev);
+            }}
+            className="absolute right-4"
+            type="button"
+          >
+            {show ? "Hide" : "Show"}
+          </button>
+        </div>
 
         <input
           type="password"

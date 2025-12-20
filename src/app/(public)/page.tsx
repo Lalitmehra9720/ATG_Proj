@@ -8,8 +8,6 @@ import InTouch from "../_landing/InTouch";
 import Dashboard from "../_landing/Dashboard";
 
 
-
-
 export default function Home() {
   
   return (
