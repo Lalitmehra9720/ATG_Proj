@@ -9,13 +9,13 @@ npm run dev
 
 
 ## Env variables needed
-You want to environment variable inside **_src/.env_**
+You want two environment variable inside **_src/.env_**
 ```bash
 MONGO_URI: YOUR_MONGODB_URL
 JWT_SECRET: YOUR_JWT_SECRET 
 ```
 
-This urls are used for authentication routes inside **_src/app/api/auth/signup_** and  **_src/app/api/auth/login_**
+This variables are used for authentication routes inside **_src/app/api/auth/signup_** and  **_src/app/api/auth/login_**
 
 ## All homepage code 
 Homepage code is inside **_src/app/(public)_**
