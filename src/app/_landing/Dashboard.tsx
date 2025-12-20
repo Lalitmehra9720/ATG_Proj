@@ -11,9 +11,7 @@ const Dashboard = () => {
             aria-hidden
             className="hidden lg:block absolute top-20 left-1/2 -translate-x-1/2 opacity-100  w-full h-auto"
           />
-
-          {/* MAIN CONTAINER */}
-          <div className="lg:absolute lg:-top-30 z-30 w-[95%] min-w-[300px] lg:w-full max-w-4xl rounded-4xl bg-[#18181c] p-6">
+          <div className="lg:absolute lg:-top-30 z-30 w-[95%] sm:max-w-[450px] md:min-w-[750px] md:max-w-[800px] min-w-[300px] lg:w-full lg:max-w-4xl rounded-4xl bg-[#18181c] p-6">
             <div className="grid gap-6 md:grid-cols-3">
               <aside className="hidden md:flex flex-col justify-between rounded-3xl bg-[#1f2026] p-5 shadow-xl min-h-[420px]">
                 <div className="flex justify-center">
@@ -67,11 +65,6 @@ const Dashboard = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* <img
-                        src="/images/ring.png"
-                        className="absolute inset-0 w-full h-full object-contain"
-                      /> */}
                     </div>
                   </div>
                 </div>
@@ -120,8 +113,6 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-// /* ================= SMALL HELPER ================= */
 const HeaderPlaceholder = () => (
   <>
     <div className="space-y-2">

@@ -23,12 +23,10 @@ const UserCard = ({
         
       "
     >
-      {/* Name */}
       <h3 className="text-lg font-semibold truncate">{user.name}</h3>
 
       <p className="text-sm text-gray-400 truncate">@{user.username}</p>
 
-      {/* Details */}
       <div className="mt-4 space-y-2 text-sm text-gray-400">
         <p className="break-all">
           <span className="font-medium">Email:</span> {user.email}

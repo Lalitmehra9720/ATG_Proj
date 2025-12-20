@@ -37,7 +37,7 @@ const Navbar = () => {
       `}
     >
       <div className="global flex items-center justify-between py-6">
-        {/* Logo */}
+        
         <Link href={"/"}>
           <Image
             src="/logo.svg"
@@ -48,9 +48,6 @@ const Navbar = () => {
             priority
           />
         </Link>
-
-        {/* Right Side */}
-
         <div className="flex items-center gap-8">
           <Link
             href="/"

@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios, { AxiosError } from "axios";
 import { useAuth } from "@/context/AuthContext";
+import toast from "react-hot-toast";
+
 
 export default function Login() {
   const router = useRouter();
@@ -26,7 +28,8 @@ export default function Login() {
 
     try {
       const { data } = await axios.post("/api/auth/login", formData);
-      alert(data.message);
+      toast.dismiss();
+      toast.success(data.message);
       login(data.user, data.token);
       router.push("/dashboard");
     } catch (err) {
@@ -72,7 +75,7 @@ export default function Login() {
         <Button type="submit" className="py-4 px-6 w-full" disabled={isLoading}>
           {isLoading ? "Logging in..." : "Login"}
         </Button>
-         <p className="mt-4 text-sm text-white/50">
+        <p className="mt-4 text-sm text-white/50">
           Don't have an account?{" "}
           <Link href="/signup" className="text-white">
             Signup

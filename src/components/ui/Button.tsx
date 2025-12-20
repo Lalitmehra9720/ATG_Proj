@@ -3,9 +3,10 @@ type ButtonProps = {
   className?: string;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
+  onClick?:()=>void
 };
 
-export default function Button({ children, className = "",type="button",disabled=false }: ButtonProps) {
+export default function Button({ children, className = "",type="button",disabled=false,onClick }: ButtonProps) {
   return (
     <button
       className={`rounded-md bg-linear-to-r from-[#F9959D] to-[#A465B8]
@@ -14,6 +15,7 @@ export default function Button({ children, className = "",type="button",disabled
       ${className}`}
       type={type}
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </button>

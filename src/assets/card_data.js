@@ -1,5 +1,3 @@
-
-
 const featuresData = [
   {
     id: 1,

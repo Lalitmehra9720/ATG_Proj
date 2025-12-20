@@ -35,7 +35,7 @@ export async function POST(req: Request) {
       password: hashedPassword,
     });
 
-    // 🔐 Create JWT
+    
     const token = jwt.sign(
       {
         userId: user._id,

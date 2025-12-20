@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios, { AxiosError } from "axios";
 import { useAuth } from "@/context/AuthContext";
+import toast from "react-hot-toast";
 export default function Signup() {
   const [signupData, setSignupData] = useState({
     name: "",
@@ -16,7 +17,6 @@ export default function Signup() {
   });
   const { login } = useAuth();
 
-  // 🔹 Added for API integration
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function Signup() {
       console.log(data);
       login(data.user, data.token);
 
-      alert(data.message);
+      toast.success(data.message);
       router.push("/dashboard");
     } catch (err) {
       if (err instanceof AxiosError)
@@ -58,13 +58,14 @@ export default function Signup() {
 
   return (
     <div>
-      <h1 className="text-4xl font-semibold lg:mt-10 self-start mt-4">Register</h1>
+      <h1 className="text-4xl font-semibold lg:mt-10 self-start mt-4">
+        Register
+      </h1>
       <p className="mt-2 text-white/50 max-w-sm">
         A good design is not only aesthetically pleasing, but also functional.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4 max-w-sm w-full">
-        {/* 🔹 Error Message Display */}
         {error && (
           <div className="bg-red-500/10 border border-red-500/50 text-red-500 text-sm p-3 rounded-lg">
             {error}

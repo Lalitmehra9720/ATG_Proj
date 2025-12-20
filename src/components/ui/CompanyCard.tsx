@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
-
-const CompanyCard = ({ logo }:{logo:StaticImageData}) => {
+const CompanyCard = ({ logo }: { logo: StaticImageData }) => {
   return (
     <div className="px-6 py-4 bg-black rounded-sm flex items-center justify-center">
       <Image
