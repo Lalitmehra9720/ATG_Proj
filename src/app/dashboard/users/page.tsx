@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import UserCard from "../components/UserCard";
 import UserCardSkeleton from "../components/UserCardSkeleton";
+import Button from "@/components/ui/Button";
 
 export default function UsersPage() {
   const [users, setUsers] = useState<any[]>([]);
@@ -95,15 +96,15 @@ export default function UsersPage() {
 
       {!loading && filteredUsers.length > 6 && (
         <div className="flex justify-center pt-4">
-          <button
+          <Button
             onClick={() => setShowAll(!showAll)}
-            className="relative group px-8 py-3 font-semibold text-white transition-all"
+            className="relative group "
           >
             <span className="absolute inset-0 w-full h-full rounded-xl bg-gradient-to-r from-[#F9959D] to-[#A465B8]"></span>
             <span className="relative">
               {showAll ? "Show Less" : "Show More"}
             </span>
-          </button>
+          </Button>
         </div>
       )}
     </div>

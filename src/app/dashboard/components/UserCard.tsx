@@ -20,6 +20,7 @@ const UserCard = ({
         w-full
         min-w-0
         overflow-hidden
+        hover:scale-95 transform ease-in-out duration-200
         
       "
     >

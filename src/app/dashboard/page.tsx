@@ -68,7 +68,7 @@ export default function DashboardPage() {
             href="/dashboard/users"
             className="inline-block mt-4 text-sm text-[#A465B8]"
           >
-            <button onClick={() => setShowAll(!showAll)}>
+            <button onClick={() => setShowAll(!showAll)} className="cursor-pointer hover:text-pink-500 transition ">
               {showAll ? "Hide users" : "View all users →"}
             </button>
           </Link>
@@ -98,7 +98,7 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1">
-        <div className="md:col-span-2 bg-[#18181c] rounded-2xl p-6">
+        <div className="md:col-span-2 bg-[#18181c] rounded-2xl p-6 ">
           <h2 className="text-xl font-semibold mb-4">Recent Users</h2>
 
           <div className="space-y-3">
@@ -109,9 +109,9 @@ export default function DashboardPage() {
               : users.slice(0, 5).map((user) => (
                   <div
                     key={user.id}
-                    className="flex items-center justify-between bg-[#23232a] rounded-xl p-3"
+                    className="flex items-center justify-between bg-[#23232a] rounded-xl p-3 hover:scale-105 transform transition-all ease-in-out duration-500"
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 ">
                       <div className="w-9 h-9 rounded-full bg-[#2a2a31] flex items-center justify-center text-sm">
                         {user.name.charAt(0)}
                       </div>

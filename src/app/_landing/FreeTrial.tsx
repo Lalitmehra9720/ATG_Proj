@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@/components/ui/Button";
 const FreeTrial = () => {
   return (
     <div className="relative z-40 flex items-center justify-center  bg-black min-h-40 lg:min-h-60">
@@ -11,7 +12,7 @@ const FreeTrial = () => {
             <p className="font-semibold text-lg leading-5 lg:leading-15 md:text-xl lg:text-[48px]">
               Fell Free to Join Our 15 Days Free Trial
             </p>
-            <button className="bg-black py-2 px-3 lg:px-0 lg:py-4  flex items-left w-fit lg:w-60 justify-center rounded-xl">
+            <button className="bg-black py-2 px-3 lg:px-0 lg:py-4  flex items-left w-fit lg:w-60 justify-center rounded-xl hover:scale-95 transition-transform duration-300 ease-in-out cursor-pointer">
               Download <span className="hidden md:inline ml-1">Template</span>
             </button>
           </div>

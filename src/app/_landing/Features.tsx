@@ -4,7 +4,7 @@ import featuresData from "@/assets/card_data";
 
 const Features = () => {
   return (
-    <section className="relative bg-black lg:layout-padding pt-20 px-8 lg:pt-[400px] pb-24 -z-10">
+    <section className="relative bg-black lg:layout-padding pt-20 px-8 lg:pt-[400px] pb-24 -z-10 ">
       <div className="relative z-0 max-w-6xl mx-auto">
         <div className="max-w-xl mb-14">
           <h1 className="poppins text-3xl lg:text-5xl text-white mb-4">
@@ -16,6 +16,7 @@ const Features = () => {
             functional.It should be able to solve the problem.
           </p>
         </div>
+
 
         <div className="flex flex-wrap items-center justify-center gap-12">
           {featuresData.map((item) => (
@@ -33,3 +34,4 @@ const Features = () => {
 };
 
 export default Features;
+

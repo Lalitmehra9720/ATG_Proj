@@ -106,7 +106,7 @@ export default function Signup() {
             onClick={() => {
               setShow((prev) => !prev);
             }}
-            className="absolute right-4"
+            className="absolute right-4 p-2 text-sm text-white/50 hover:text-white cursor-pointer transition"
             type="button"
           >
             {show ? "Hide" : "Show"}

@@ -10,6 +10,75 @@
 .layout-padding {
   @apply mx-auto px-[165px];
 }
+@layer components {
+  
+  .footerLink {
+    @apply relative inline-block text-gray-400 transition-colors duration-300 hover:text-white;
+  }
+
+  .footerLink::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-[2px] w-0 
+    bg-gradient-to-r from-[#FF9898] to-[#8054FF]
+    transition-all duration-300;
+  }
+
+  .footerLink:hover::after {
+    @apply w-full;
+  }
+
+  
+  .socialIcon {
+    @apply w-9 h-9 rounded-full bg-white/10 flex items-center justify-center
+    transition-all duration-300 ease-in-out cursor-pointer;
+  }
+
+  .socialIcon:hover {
+    @apply bg-white/20 scale-110 -translate-y-1 shadow-lg shadow-purple-500/30;
+  }
+}
+@layer components {
+  .socialIcon .icon {
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .socialIcon:hover .icon {
+    color: #3b82f6; /* blue-500 */
+  }
+}
+
+
+@layer components {
+  /* Orbit Rotation */
+  .orbit {
+    animation: orbitRotate 12s linear infinite;
+  }
+
+  @keyframes orbitRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Keep icons straight while orbiting */
+  .orbit-item {
+    animation: orbitRotateReverse 12s linear infinite;
+  }
+
+  @keyframes orbitRotateReverse {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
 .circle {
   border-radius: 50%;
 }

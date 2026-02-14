@@ -8,7 +8,6 @@ import axios, { AxiosError } from "axios";
 import { useAuth } from "@/context/AuthContext";
 import toast from "react-hot-toast";
 
-
 export default function Login() {
   const router = useRouter();
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -78,7 +77,7 @@ export default function Login() {
             onClick={() => {
               setShow((prev) => !prev);
             }}
-            className="absolute right-4"
+            className="absolute right-4 p-2 text-sm text-white/50 hover:text-white cursor-pointer transition"
             type="button"
           >
             {show ? "Hide" : "Show"}

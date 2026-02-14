@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import Button from "@/components/ui/Button";
+import Link from "@deemlol/next-icons/build/icons/link";
 export default function SettingPage() {
   const { logout, user } = useAuth();
   const router = useRouter();
@@ -33,9 +35,12 @@ export default function SettingPage() {
           <p className="text-sm text-gray-400">{user.email}</p>
         </div>
 
-        <button className="bg-[#23232a] px-4 py-2 rounded-lg text-sm hover:bg-[#2d2d35] transition">
+        <Button className="">
           Edit Profile
-        </button>
+        </Button>
+        <a href="/dashboard" className="text-sm text-blue-400 hover:text-blue-300">
+          Back to Dashboard
+        </a>
       </div>
       <div className="bg-[#18181c] rounded-2xl p-6 space-y-6">
         <h2 className="text-lg font-medium">Account Information</h2>
@@ -77,12 +82,12 @@ export default function SettingPage() {
         <h2 className="text-lg font-medium">Security</h2>
 
         <div className="flex flex-wrap gap-4">
-          <button className="bg-[#23232a] px-4 py-2 rounded-lg text-sm hover:bg-[#2d2d35] transition">
+          <Button className="disabled ">
             Change Password
-          </button>
+          </Button>
 
           <button
-            className="bg-red-500/10 text-red-400 px-4 py-2 rounded-lg text-sm hover:bg-red-500/20 transition"
+            className="bg-red-500/10 text-red-400 px-4 py-2 rounded-lg text-sm hover:bg-red-700/20 transition cursor-pointer"
             onClick={() => {
               logout();
               toast.success("Logout successfully");

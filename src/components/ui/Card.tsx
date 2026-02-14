@@ -8,7 +8,7 @@ const Card = ({
   description: string;
 }) => {
   return (
-    <div className=" w-85 h-90 bg-[#18181c] rounded-3xl p-12 ">
+    <div className="transform hover:scale-105 w-85 h-90 bg-[#18181c] rounded-3xl p-12 hover:border-indigo-500">
       <div className="mb-6 flex justify-center">
         <div className="w-16 h-16 rounded-2xl bg-gray-800 flex items-center justify-center">
           <img src={icon} alt={title} className="w-8 h-8" />
@@ -25,3 +25,6 @@ const Card = ({
 };
 
 export default Card;
+
+
+ 

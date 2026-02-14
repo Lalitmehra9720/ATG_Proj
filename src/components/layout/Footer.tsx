@@ -28,44 +28,44 @@ const Footer = () => {
             <div className="flex flex-wrap gap-12">
               <ul className="space-y-2 text-sm leading-8">
                 <li>
-                  <Link href="#">Home</Link>
+                  <Link href="#" className="footerLink">Home</Link>
                 </li>
                 <li>
-                  <Link href="#">Section One</Link>
+                  <Link href="#" className="footerLink">Section One</Link>
                 </li>
                 <li>
-                  <Link href="#">Section Two</Link>
+                  <Link href="#" className="footerLink">Section Two</Link>
                 </li>
                 <li>
-                  <Link href="#">Section Three</Link>
-                </li>
-              </ul>
-              <ul className="space-y-2 text-sm leading-8">
-                <li>
-                  <Link href="#">Home</Link>
-                </li>
-                <li>
-                  <Link href="#">Section One</Link>
-                </li>
-                <li>
-                  <Link href="#">Section Two</Link>
-                </li>
-                <li>
-                  <Link href="#">Section Three</Link>
+                  <Link href="#" className="footerLink">Section Three</Link>
                 </li>
               </ul>
               <ul className="space-y-2 text-sm leading-8">
                 <li>
-                  <Link href="#">Home</Link>
+                  <Link href="#" className="footerLink">Home</Link>
                 </li>
                 <li>
-                  <Link href="#">Section One</Link>
+                  <Link href="#" className="footerLink">Section One</Link>
                 </li>
                 <li>
-                  <Link href="#">Section Two</Link>
+                  <Link href="#" className="footerLink">Section Two</Link>
                 </li>
                 <li>
-                  <Link href="#">Section Three</Link>
+                  <Link href="#" className="footerLink">Section Three</Link>
+                </li>
+              </ul>
+              <ul className="space-y-2 text-sm leading-8">
+                <li>
+                  <Link href="#" className="footerLink">Home</Link>
+                </li>
+                <li>
+                  <Link href="#" className="footerLink">Section One</Link>
+                </li>
+                <li>
+                  <Link href="#" className="footerLink">Section Two</Link>
+                </li>
+                <li>
+                  <Link href="#" className="footerLink">Section Three</Link>
                 </li>
               </ul>
             </div>
@@ -76,15 +76,15 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p>All Rights Reserved Inkyy.com 2022</p>
 
-          <div className="flex gap-3">
-            <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20">
-              <Twitter size={20} color="#fff" />
+          <div className="flex gap-3 ">
+            <div className="socialIcon hover:bg-white/20">
+              <Twitter size={20} className="icon" />
             </div>
-            <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20">
-              <Linkedin size={20} color="#fff" />
+            <div className="socialIcon">
+              <Linkedin size={20} className="icon"  />
             </div>
-            <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20">
-              <Discord size={20} color="#fff" />
+            <div className="socialIcon">
+              <Discord size={20} className="icon"  />
             </div>
           </div>
         </div>
