@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@/components/ui/Button";
 const FreeTrial = () => {
   return (
     <div className="relative z-40 flex items-center justify-center  bg-black min-h-40 lg:min-h-60">
